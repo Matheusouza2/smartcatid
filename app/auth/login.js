@@ -1,5 +1,6 @@
 import { useAuth } from "@Contexts/AuthContext";
 import { useRouter } from "expo-router";
+import Constants from "expo-constants";
 import { useState } from "react";
 import {
   ActivityIndicator,
@@ -86,6 +87,10 @@ export default function Login() {
             <Text className="font-semibold text-primary-400">Cadastre-se</Text>
           </Text>
         </TouchableOpacity>
+
+        <Text className="absolute text-xs text-center text-shark-600 bottom-6 left-0 right-0">
+          v{Constants.expoConfig?.version || "1.0.0"}
+        </Text>
       </View>
     </KeyboardAvoidingView>
   );
